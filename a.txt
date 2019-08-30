@@ -1,2 +1,0 @@
-First line in the master branch.
-Second line adding to the master pushing to org.
