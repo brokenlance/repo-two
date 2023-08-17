@@ -40,10 +40,6 @@ jobs:
           java-version: '17'
       - run: java test
 
-  publish:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
-    steps:
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v3.1.2
         with:
