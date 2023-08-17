@@ -31,14 +31,14 @@ jobs:
         with:
           distribution: 'oracle' # See 'Supported distributions' for available options
           java-version: '17'
-      - run: javac test.java
+        run: javac test.java
 
       - name: run
         uses: actions/setup-java@v3
         with:
           distribution: 'oracle' # See 'Supported distributions' for available options
           java-version: '17'
-      - run: java test
+        run: java test
 
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v3.1.2
@@ -48,3 +48,6 @@ jobs:
           # A file, directory or wildcard pattern that describes what to upload
           path: test.class
           # The desired behavior if no files are found using the provided path.
+
+      - name: list-files
+        run: find .
