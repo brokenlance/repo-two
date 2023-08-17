@@ -43,4 +43,18 @@ jobs:
 
       - name: Step two
         # Runs a single command using the runners shell
-        run: env | sort
+        run: nslookup i.net
+
+  # This workflow contains a single job called "build"
+  job3:
+    name: Third job
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    # dependencies:
+    needs: [ "job1", "job2" ]
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - name: Step one
+        # Runs a single command using the runners shell
+        run: date
